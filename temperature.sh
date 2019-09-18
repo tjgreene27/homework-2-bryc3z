@@ -1,7 +1,5 @@
 #!/bin/bash
 #converts Fahrenheit to Celsius
 
-export t=$(($1-32))
-export t=$((t*5))
-export C=$((t/9))
+export C=$(echo "scale=4;($1-32)*(0.5555)"|bc)
 echo "That is $C Celsius"
