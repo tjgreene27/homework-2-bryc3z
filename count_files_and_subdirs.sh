@@ -4,13 +4,9 @@
 #read d
 
 echo "Number of files in this directory"
-ls | wc -w
+ls -1 | wc -l
 echo " "
 echo "Number of subdirectories in this directory"
-grep -r dir| wc -w
+ls -l | grep "^d" | wc -l
 
-d=0
-for (f in ls) then;
-if (f -d) 
-d=$((d+1))
 
